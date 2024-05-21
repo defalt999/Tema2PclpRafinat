@@ -53,3 +53,22 @@ void grupa::showNrElevi() {
 	cout << "In grupa sunt: " << nrelevi << " elevi"<<endl<<endl;
 }
 
+void grupa::checkGrupaById() {
+	int nrMat;
+	bool adev=false;
+	cout << "Introdu nr mat: "<<endl;
+	cin >> nrMat;
+	for (int i = 0; i < elevi.size(); i++) {
+		if (elevi[i].getNrmat() == nrMat) {
+			cout << "Apartine grupei";
+			cout << elevi[i].getNrmat() << endl;
+			cout << elevi[i].getNume() << endl;
+			cout << elevi[i].getMedie() << endl;
+			adev = true;
+		}
+
+	}
+	if (adev == false)
+		cout << "Nu apartine";
+	
+}
